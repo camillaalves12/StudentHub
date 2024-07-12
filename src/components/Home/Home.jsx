@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className="flex h-screen items-center justify-center bg-zinc-400">
-      <div className="flex w-full max-w-full items-center justify-between gap-8 space-x-8 px-4">
+    <div className="flex h-screen items-center justify-center bg-zinc-800 px-20">
+      <div className="flex w-full max-w-full items-center justify-between gap-10 px-4">
         <div className="clip-polygon w-3/5">
           {' '}
           {/* 40% para a imagem */}
@@ -20,9 +20,9 @@ export default function Home() {
           <p className="w-full pb-5 text-5xl font-bold text-orange-800">
             Começar a sua graduação nunca foi tão simples
           </p>
-          <p className="w-full pb-5 text-4xl font-bold leading-relaxed">
+          <p className="w-full pb-5 text-4xl font-bold leading-relaxed text-white">
             Vem pra Anhanguera e dê o start na carreira por{' '}
-            <span className="rounded-md bg-orange-600 p-1">R$ 59*</span> pelo
+            <span className="rounded-md bg-orange-700 p-1">R$ 59*</span> pelo
             Pague Fácil!
           </p>
           <div className="flex content-start gap-10">
