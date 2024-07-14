@@ -4,9 +4,11 @@ import Home from '../components/Home/Home'
 
 export default function PageHome() {
   return (
-    <div>
+    <div className="flex h-screen flex-col">
       <Header />
-      <Home />
+      <div className="grow">
+        <Home />
+      </div>
     </div>
   )
 }
