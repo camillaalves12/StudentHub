@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Card({
   course,
-  typeCouser,
+  typeCourse,
   numberPeriod,
   modality,
   price,
@@ -14,7 +14,7 @@ export default function Card({
       <div>
         <p className="text-xl font-bold">{course}</p>
         <p className="text-base">
-          {typeCouser} - {numberPeriod} Períodos
+          {typeCourse} - {numberPeriod} Períodos
         </p>
       </div>
       <p className="mt-3 w-5/12 rounded-3xl border-2 border-orange-700  text-center text-base font-semibold text-white hover:bg-orange-700">
