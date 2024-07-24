@@ -1,7 +1,17 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
+  css: {
+    preprocessorOptions: {
+      css: {
+        additionalData: `
+          @import 'swiper/css';
+          @import 'swiper/css/navigation';
+          @import 'swiper/css/pagination';
+        `,
+      },
+    },
+  },
 })

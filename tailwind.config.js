@@ -7,6 +7,7 @@ export default {
     './pages/**/*.{js,jsx}',
     './components/**/*.{js,jsx}',
     './app/**/*.{js,jsx}',
+    './node_modules/swiper/swiper-bundle.min.css',
   ],
   theme: {
     extend: {},
