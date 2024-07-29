@@ -3,18 +3,29 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Pagination } from 'swiper/modules'
+import { EffectCoverflow } from 'swiper/modules'
 import Card from '../components/Card/Card'
+
+// import './index.css'
 
 export default function PageCards() {
   return (
-    <div className="mx-auto w-full max-w-screen-xl">
+    <div className="mx-auto h-screen w-full max-w-screen-xl">
       <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={30}
-        slidesPerView={3}
-        navigation
-        pagination={{ clickable: true }}
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
       >
         <SwiperSlide>
           <Card
@@ -34,6 +45,26 @@ export default function PageCards() {
             modality="Presencial"
             price="400,00"
             shift="Matutino"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card
+            course="Ciência da Computação"
+            typeCourse="Bacharelado"
+            numberPeriod="8"
+            modality="Presencial"
+            price="350,00"
+            shift="Noturno"
+          />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Card
+            course="Ciência da Computação"
+            typeCourse="Bacharelado"
+            numberPeriod="8"
+            modality="Presencial"
+            price="350,00"
+            shift="Noturno"
           />
         </SwiperSlide>
         <SwiperSlide>
