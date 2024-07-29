@@ -10,7 +10,7 @@ export default function Card({
   shift,
 }) {
   return (
-    <div className="flex h-72 w-80 flex-col justify-center gap-4 rounded-3xl border-2 border-white p-4 text-white">
+    <div className="flex h-80 w-80 flex-col justify-center gap-4 rounded-3xl border-2 border-white p-4 text-white">
       <div>
         <p className="text-xl font-bold">{course}</p>
         <p className="text-base">
