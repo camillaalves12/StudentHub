@@ -2,12 +2,12 @@ import React from 'react'
 
 export default function Header() {
   return (
-    <header className="flex w-full items-center justify-between bg-orange-800 p-3">
+    <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-orange-800 p-3">
       <div className="flex items-center gap-4">
         <h1 className="text-2xl font-semibold text-white">Student Hub</h1>
       </div>
-      <nav className="flex items-center gap-10 ">
-        <a href="#" className="font-semibold text-white">
+      <nav className="flex items-center gap-10 text-lg">
+        <a href="#" className="text-lg font-semibold text-white">
           Home
         </a>
         <a href="#" className="font-semibold text-white">
