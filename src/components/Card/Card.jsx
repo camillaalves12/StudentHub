@@ -21,7 +21,7 @@ export default function Card({
         {modality}
       </p>
       <div>
-        <p className="text-3xl font-bold">R$ {price}</p>
+        <p className="text-4xl font-bold text-orange-700">R$ {price}</p>
         <p className="text-lg">Turno: {shift} </p>
       </div>
       <button className="mt-3 rounded-3xl border-2 border-orange-700 px-10 py-1 text-lg font-semibold text-white hover:bg-orange-700">
