@@ -8,10 +8,16 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .clip-polygon img {
   @apply h-auto w-full;
   clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 }
+
+* {
+  box-sizing: border-box;
+}
+
 
 .swiper {
   width: 100%;
