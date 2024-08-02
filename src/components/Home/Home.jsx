@@ -17,7 +17,7 @@ export default function Home() {
         <div className="flex w-4/5 flex-col justify-start">
           {' '}
           {/* 60% para o texto */}
-          <p className="w-full pb-5 text-7xl font-bold text-orange-800">
+          <p className="w-full pb-5 text-6xl font-bold text-orange-800">
             Começar a sua graduação nunca foi tão simples
           </p>
           <p className="w-full pb-5 text-5xl font-bold leading-relaxed text-white">
