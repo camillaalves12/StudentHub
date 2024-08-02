@@ -1,5 +1,4 @@
 import React from 'react'
-
 export default function Header() {
   return (
     <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-orange-800 p-3">
