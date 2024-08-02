@@ -12,9 +12,9 @@ export default function CardArea() {
       <p className="box-border cursor-pointer border-b-2 border-slate-600 py-2">
         Enfermagem
       </p>
-      {/* <p className="box-border cursor-pointer border-b-2 border-slate-600 py-2">
+      <p className="box-border cursor-pointer border-b-2 border-slate-600 py-2">
         Nutrição
-      </p> */}
+      </p>
     </div>
   )
 }
