@@ -11,7 +11,8 @@ import Card from '../components/Card/Card'
 
 export default function PageCards() {
   return (
-    <div className="mx-auto h-screen w-full max-w-screen-xl">
+    <div className="mx-auto h-screen w-full max-w-screen-2xl">
+      <p className="text-4xl font-bold text-orange-800">Os mais populares</p>
       <Swiper
         effect={'coverflow'}
         grabCursor={true}
