@@ -25,10 +25,10 @@ export default function Home() {
             <span className="rounded-md bg-orange-700 p-1">R$ 59*</span>
           </p>
           <div className="mt-5 flex gap-10">
-            <button className="rounded-3xl bg-orange-700 px-3 py-3 text-base font-bold text-white hover:bg-orange-800">
+            <button className="rounded-3xl bg-orange-700 p-3 text-base font-bold text-white hover:bg-orange-800">
               EXPLORAR CURSOS
             </button>
-            <button className="rounded-3xl bg-orange-700 px-3 py-3 text-base font-bold text-white hover:bg-orange-800">
+            <button className="rounded-3xl bg-orange-700 p-3 text-base font-bold text-white hover:bg-orange-800">
               INSCREVA-SE
             </button>
           </div>
