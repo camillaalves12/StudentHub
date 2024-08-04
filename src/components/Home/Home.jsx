@@ -17,18 +17,18 @@ export default function Home() {
         <div className="flex w-4/5 flex-col justify-start">
           {' '}
           {/* 60% para o texto */}
-          <p className="w-full pb-5 text-6xl font-bold text-orange-800">
+          <p className="w-full pb-5 text-5xl font-bold text-orange-800">
             Começar a sua graduação nunca foi tão simples
           </p>
-          <p className="w-full pb-5 text-5xl font-bold leading-relaxed text-white">
+          <p className="w-full pb-5 text-4xl font-bold leading-relaxed text-white">
             Vem pra Student Hub e dê o start na sua carreira a partir de{' '}
             <span className="rounded-md bg-orange-700 p-1">R$ 59*</span>
           </p>
           <div className="mt-5 flex gap-10">
-            <button className="rounded-3xl bg-orange-800 px-6 py-4 text-xl font-semibold text-white hover:bg-orange-700">
+            <button className="rounded-3xl bg-orange-700 px-3 py-3 text-base font-bold text-white hover:bg-orange-800">
               EXPLORAR CURSOS
             </button>
-            <button className="rounded-3xl bg-orange-800 px-6 py-4 text-xl font-semibold text-white hover:bg-orange-700">
+            <button className="rounded-3xl bg-orange-700 px-3 py-3 text-base font-bold text-white hover:bg-orange-800">
               INSCREVA-SE
             </button>
           </div>
