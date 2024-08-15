@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Home() {
   return (
-    <div className="flex h-full items-center justify-center bg-zinc-800 px-20">
+    <div className="flex h-screen items-center justify-center bg-zinc-800 px-20">
       <div className="flex w-full max-w-full items-center justify-between gap-10 px-4">
         <div className="clip-polygon w-3/5">
           {' '}
