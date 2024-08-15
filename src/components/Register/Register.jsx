@@ -18,7 +18,7 @@ export default function Register() {
             id="name"
             {...register('name', { required: 'Nome é obrigatório' })}
             className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
-            placeholder="Nome Completo"
+            placeholder="Nome"
           />
           {errors.name && (
             <span className="text-red-500">{errors.name.message}</span>
