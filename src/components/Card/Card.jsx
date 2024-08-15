@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 export default function Card({
   course,
@@ -25,7 +26,7 @@ export default function Card({
         <p className="text-lg">Turno: {shift} </p>
       </div>
       <button className="mt-3 rounded-3xl border-2 border-orange-700 px-10 py-1 text-lg font-semibold text-white hover:bg-orange-700">
-        INSCREVA-SE
+        <Link to="/register">INSCREVA-SE</Link>
       </button>
     </div>
   )
