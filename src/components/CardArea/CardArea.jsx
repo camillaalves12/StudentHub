@@ -10,10 +10,10 @@ export default function CardArea() {
       />
       <div className="p-4 pb-5">
         <p className="text-3xl font-bold text-orange-700">Saúde</p>
-        <p className="box-border cursor-pointer border-b-2 border-slate-600 py-3 hover:bg-slate-700 hover:font-bold">
+        <p className="box-border cursor-pointer border-b-2 border-slate-600 py-3 hover:font-bold">
           Enfermagem
         </p>
-        <p className="box-border cursor-pointer border-b-2 border-slate-600 py-3  hover:bg-slate-700 hover:font-bold">
+        <p className="box-border cursor-pointer border-b-2 border-slate-600 py-3  hover:font-bold">
           Medicina
         </p>
         <p className="box-border cursor-pointer border-b-2 border-slate-600 py-3">
