@@ -11,17 +11,39 @@ export default function Register() {
   const onSubmit = (data) => console.log(data)
 
   return (
-    <div className="w-96 text-white">
+    <div className="h-auto w-96 rounded-sm p-5 text-black shadow-lg shadow-gray-500/50">
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
         <div>
           <input
             id="name"
             {...register('name', { required: 'Nome é obrigatório' })}
-            className="block w-full rounded border border-gray-300 p-2 outline-none"
+            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
             placeholder="Nome Completo"
           />
           {errors.name && (
             <span className="text-red-500">{errors.name.message}</span>
+          )}
+        </div>
+        <div>
+          <input
+            id="surname"
+            {...register('surname', { required: 'Sobrenome é obrigatório' })}
+            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
+            placeholder="Sobrenome"
+          />
+          {errors.surname && (
+            <span className="text-red-500">{errors.surname.message}</span>
+          )}
+        </div>
+        <div>
+          <input
+            id="cpf"
+            {...register('cpf', { required: 'CPF é obrigatório' })}
+            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
+            placeholder="CPF"
+          />
+          {errors.cpf && (
+            <span className="text-red-500">{errors.cpf.message}</span>
           )}
         </div>
 
@@ -51,55 +73,10 @@ export default function Register() {
           )}
         </div>
 
-        <div>
-          <label>Cursos</label>
-          <div className="space-y-2">
-            <div>
-              <label className="block">
-                <input
-                  type="checkbox"
-                  {...register('courses')}
-                  value="Enfermagem"
-                />
-                Enfermagem (Saúde)
-              </label>
-            </div>
-            <div>
-              <label className="block">
-                <input
-                  type="checkbox"
-                  {...register('courses')}
-                  value="Desenvolvimento de Software"
-                />
-                Desenvolvimento de Software (Tecnologia)
-              </label>
-            </div>
-            <div>
-              <label className="block">
-                <input
-                  type="checkbox"
-                  {...register('courses')}
-                  value="Pedagogia"
-                />
-                Pedagogia (Educação)
-              </label>
-            </div>
-            <div>
-              <label className="block">
-                <input
-                  type="checkbox"
-                  {...register('courses')}
-                  value="Engenharia Civil"
-                />
-                Engenharia Civil (Engenharias)
-              </label>
-            </div>
-          </div>
-        </div>
-
         <input
           type="submit"
-          className="rounded bg-blue-500 px-4 py-2 text-white"
+          className="w-full cursor-pointer rounded bg-blue-600 px-4 py-1 font-semibold text-white hover:bg-blue-700"
+          value="Cadastrar"
         />
       </form>
     </div>
