@@ -4,9 +4,9 @@ import PageHome from './pages/PageHome'
 // import PageCards from './pages/PageCards'
 // import PageCardArea from './pages/PageCardArea'
 import PageRegister from './pages/PageRegister'
-// import Course from './components/Course/Course'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import PageCourse from './pages/PageCourse'
 // import Course from './components/Course/Course'
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<PageHome />} />
           {/* <Route path="/courses" element={<PageCards />} /> */}
-          {/* <Route path="/course" element={<Course />} /> */}
+          <Route path="/course" element={<PageCourse />} />
           <Route path="/register" element={<PageRegister />} />
         </Routes>
       </Router>
