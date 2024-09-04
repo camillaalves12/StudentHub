@@ -12,7 +12,7 @@ export default function Header() {
       duration: 500,
       delay: 0,
       smooth: 'easeInOutQuart',
-      offset: section === 'courses' ? offset : 0, // Aplica o offset apenas para a seção "courses"
+      offset: section === 'courses' ? offset : 0,
     }
 
     if (location.pathname !== '/') {
