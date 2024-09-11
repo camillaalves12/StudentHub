@@ -28,7 +28,13 @@ export default function Header() {
   return (
     <header className="fixed left-0 top-0 z-50 flex w-full items-center justify-between bg-orange-800 p-3">
       <div className="flex items-center gap-4">
-        <h1 className="text-2xl font-semibold text-white">Student Hub</h1>
+        {' '}
+        <button
+          onClick={() => handleNavigation('home')}
+          className="cursor-pointer text-lg font-semibold text-white"
+        >
+          <h1 className="text-2xl font-semibold text-white">Student Hub</h1>
+        </button>
       </div>
       <nav className="flex items-center gap-10 text-lg">
         <button
@@ -49,6 +55,10 @@ export default function Header() {
         >
           Áreas
         </button>
+        <button className="cursor-pointer text-lg font-semibold text-white">
+          <Link to="/students">Alunos</Link>
+        </button>
+
         <button className="rounded-3xl bg-orange-800 px-6 py-2 font-semibold text-white hover:bg-orange-700">
           <Link to="/register">INSCREVA-SE</Link>
         </button>
