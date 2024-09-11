@@ -7,6 +7,7 @@ import PageRegister from './pages/PageRegister'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import PageCourse from './pages/PageCourse'
+import PageStudents from './pages/PageStudents'
 // import Course from './components/Course/Course'
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
           {/* <Route path="/courses" element={<PageCards />} /> */}
           <Route path="/course" element={<PageCourse />} />
           <Route path="/register" element={<PageRegister />} />
+          <Route path="/students" element={<PageStudents />} />
         </Routes>
       </Router>
     </div>

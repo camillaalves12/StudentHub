@@ -1,4 +1,5 @@
 import React from 'react'
+import InputMask from 'react-input-mask'
 import { useForm } from 'react-hook-form'
 
 export default function Register() {
@@ -16,32 +17,31 @@ export default function Register() {
         <div>
           <input
             id="name"
-            {...register('name', { required: 'Nome é obrigatório' })}
+            {...register('name', {
+              required: 'Nome e Sobrenome é obrigatório',
+            })}
             className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
-            placeholder="Nome"
+            placeholder="Nome e Sobrenome"
           />
           {errors.name && (
             <span className="text-red-500">{errors.name.message}</span>
           )}
         </div>
+
         <div>
-          <input
-            id="surname"
-            {...register('surname', { required: 'Sobrenome é obrigatório' })}
-            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
-            placeholder="Sobrenome"
-          />
-          {errors.surname && (
-            <span className="text-red-500">{errors.surname.message}</span>
-          )}
-        </div>
-        <div>
-          <input
-            id="cpf"
+          <InputMask
+            mask="999.999.999-99"
             {...register('cpf', { required: 'CPF é obrigatório' })}
-            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
-            placeholder="CPF"
-          />
+          >
+            {(inputProps) => (
+              <input
+                {...inputProps}
+                id="cpf"
+                className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
+                placeholder="CPF"
+              />
+            )}
+          </InputMask>
           {errors.cpf && (
             <span className="text-red-500">{errors.cpf.message}</span>
           )}
@@ -61,15 +61,35 @@ export default function Register() {
         </div>
 
         <div>
-          <input
-            id="phone"
-            type="tel"
-            {...register('phone', { required: 'Celular é obrigatório' })}
-            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
-            placeholder="Celular"
-          />
+          <InputMask
+            mask="(99) 99999-9999"
+            {...register('phone', {
+              required: 'Número de celular é obrigatório',
+            })}
+          >
+            {(inputProps) => (
+              <input
+                {...inputProps}
+                id="phone"
+                className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
+                placeholder="Número de Celular"
+              />
+            )}
+          </InputMask>
           {errors.phone && (
             <span className="text-red-500">{errors.phone.message}</span>
+          )}
+        </div>
+        <div>
+          <input
+            id="city"
+            type="tel"
+            {...register('city', { required: 'Cidade é obrigatório' })}
+            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
+            placeholder="Cidade"
+          />
+          {errors.city && (
+            <span className="text-red-500">{errors.city.message}</span>
           )}
         </div>
 
