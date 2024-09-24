@@ -1,6 +1,7 @@
 import React from 'react'
 import InputMask from 'react-input-mask'
 import { useForm } from 'react-hook-form'
+import axios from 'axios'
 
 export default function Register() {
   const {
@@ -9,7 +10,17 @@ export default function Register() {
     formState: { errors },
   } = useForm()
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = async (data) => {
+    try {
+      // Faz a requisição para o backend com os dados do formulário
+      const response = await axios.post('http://localhost:3001/students', data)
+      console.log('Aluno cadastrado:', response.data)
+      // Você pode exibir uma mensagem de sucesso ou redirecionar o usuário aqui
+    } catch (error) {
+      console.error('Erro ao cadastrar aluno:', error)
+      // Exibir mensagem de erro para o usuário
+    }
+  }
 
   return (
     <div className="h-auto w-96 rounded-sm p-5 text-black shadow-lg shadow-gray-500/50">
