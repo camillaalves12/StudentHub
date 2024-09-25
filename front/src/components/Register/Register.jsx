@@ -7,6 +7,7 @@ export default function Register() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm()
 
@@ -15,6 +16,15 @@ export default function Register() {
       // Faz a requisição para o backend com os dados do formulário
       const response = await axios.post('http://localhost:3001/students', data)
       console.log('Aluno cadastrado:', response.data)
+
+      reset({
+        name: '',
+        cpf: '',
+        email: '',
+        phone: '',
+        city: '',
+        course: '',
+      })
       // Você pode exibir uma mensagem de sucesso ou redirecionar o usuário aqui
     } catch (error) {
       console.error('Erro ao cadastrar aluno:', error)
@@ -101,6 +111,17 @@ export default function Register() {
           />
           {errors.city && (
             <span className="text-red-500">{errors.city.message}</span>
+          )}
+        </div>
+        <div>
+          <input
+            id="course"
+            {...register('course', { required: 'Curso é obrigatório' })}
+            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
+            placeholder="Curso"
+          />
+          {errors.course && (
+            <span className="text-red-500">{errors.course.message}</span>
           )}
         </div>
 
