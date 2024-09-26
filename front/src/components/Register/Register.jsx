@@ -8,15 +8,16 @@ export default function Register() {
     register,
     handleSubmit,
     reset,
+    setValue, // Import setValue para manipular os valores manualmente
     formState: { errors },
   } = useForm()
 
   const onSubmit = async (data) => {
     try {
-      // Faz a requisição para o backend com os dados do formulário
       const response = await axios.post('http://localhost:3001/students', data)
       console.log('Aluno cadastrado:', response.data)
 
+      // Limpa todos os campos
       reset({
         name: '',
         cpf: '',
@@ -25,10 +26,12 @@ export default function Register() {
         city: '',
         course: '',
       })
-      // Você pode exibir uma mensagem de sucesso ou redirecionar o usuário aqui
+
+      // Limpa os campos com máscara manualmente
+      setValue('cpf', '')
+      setValue('phone', '')
     } catch (error) {
       console.error('Erro ao cadastrar aluno:', error)
-      // Exibir mensagem de erro para o usuário
     }
   }
 
@@ -52,6 +55,7 @@ export default function Register() {
         <div>
           <InputMask
             mask="999.999.999-99"
+            defaultValue=""
             {...register('cpf', { required: 'CPF é obrigatório' })}
           >
             {(inputProps) => (
@@ -84,6 +88,7 @@ export default function Register() {
         <div>
           <InputMask
             mask="(99) 99999-9999"
+            defaultValue=""
             {...register('phone', {
               required: 'Número de celular é obrigatório',
             })}
@@ -106,7 +111,7 @@ export default function Register() {
             id="city"
             type="tel"
             {...register('city', { required: 'Cidade é obrigatório' })}
-            className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
+            className="block w-full rounded border border-gray-300 p-1 text-black outline-none"
             placeholder="Cidade"
           />
           {errors.city && (
