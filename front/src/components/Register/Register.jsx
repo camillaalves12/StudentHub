@@ -114,12 +114,51 @@ export default function Register() {
           )}
         </div>
         <div>
-          <input
+          <select
             id="course"
             {...register('course', { required: 'Curso é obrigatório' })}
             className="block w-full rounded border border-gray-300 p-2 text-black outline-none"
-            placeholder="Curso"
-          />
+          >
+            <option value="">Selecione um curso</option>
+
+            <optgroup label="Saúde">
+              <option value="Medicina">Medicina</option>
+              <option value="Fisioterapia">Fisioterapia</option>
+              <option value="Enfermagem">Enfermagem</option>
+              <option value="Nutrição">Nutrição</option>
+            </optgroup>
+
+            <optgroup label="Tecnologia">
+              <option value="Ciência da Computação">
+                Ciência da Computação
+              </option>
+              <option value="Engenharia de Software">
+                Engenharia de Software
+              </option>
+              <option value="Sistemas de Informação">
+                Sistemas de Informação
+              </option>
+              <option value="Redes de Computadores">
+                Redes de Computadores
+              </option>
+            </optgroup>
+
+            <optgroup label="Negócios">
+              <option value="Administração">Administração</option>
+              <option value="Marketing">Marketing</option>
+              <option value="Economia">Economia</option>
+              <option value="Gestão de Recursos Humanos">
+                Gestão de Recursos Humanos
+              </option>
+            </optgroup>
+
+            <optgroup label="Humanas">
+              <option value="Psicologia">Psicologia</option>
+              <option value="Pedagogia">Pedagogia</option>
+              <option value="Direito">Direito</option>
+              <option value="Sociologia">Sociologia</option>
+            </optgroup>
+          </select>
           {errors.course && (
             <span className="text-red-500">{errors.course.message}</span>
           )}
